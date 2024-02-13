@@ -82,7 +82,7 @@ func moveFirstToLast(cards []int) []int {
 // 把前n张牌插进剩下卡片的中间去, 注意如果不是插中间,而是放到最后一张牌后面就会不成功
 // 我估计尼格买提就是这里错了,但是电视镜头给了刘谦特写,看不到尼格买提的操作
 func moveTopN(cards []int, n int) []int {
-	randInt := randIntRange(n+1, 7) //一定要插在[n+1, 6]范围内, 如randInt=7即查到最后一张牌后面就会引发错误
+	randInt := randIntRange(n+1, 7) //一定要插在[n+1, 6]范围内, 如randInt=7即插到最后一张牌后面就会引发错误
 	//randInt := 7
 	firstThree, beforeInsert, afterInsert := cards[:n], cards[n:randInt], cards[randInt:]
 	// fmt.Println("firstThree=", firstThree)
